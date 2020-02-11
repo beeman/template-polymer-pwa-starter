@@ -1,0 +1,26 @@
+{
+  "name": "template-polymer-pwa-starter",
+  "dev": {
+    "cmd": "yarn",
+    "params": "start"
+  },
+  "build": {
+    "cmd": "yarn",
+    "params": "polymer build --auto-base-path && gulp prpl-server"
+  },
+  "deploy": {},
+  "containers": [
+    {
+      "name": "dev",
+      "image": "kikstart/kikstart:latest",
+      "port": 80,
+      "cmd": [
+        "init",
+        "-s"
+      ]
+    }
+  ],
+  "agentId": {
+    "agent.colmena.kikstart.one": "5"
+  }
+}
